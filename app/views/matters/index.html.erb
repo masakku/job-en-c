@@ -1,0 +1,45 @@
+<%= render "shared/header" %>
+<div class="main">
+
+  <div class="title-contents">
+    <h2 class="service-title">
+      仕事の出会いをきっかけに
+    </h2>
+    <p class="service-subtitle">
+      JOB EN Cとは
+    </p>
+    <p class="service-explain">
+      JOB EN C では、より多くのビジネスマンの方々にお仕事に関わる出会いを提供する
+    </p>
+    <p class="service-explain">
+      ビジネスマッチングアプリです。
+    </p>
+    <span class="matter-text">案件投稿</span>
+  </div>
+
+  <div class="matter-contents">
+    <h2 class="title">案件一覧</h2>
+  </div>
+    <ul class="matter-lists">
+      <li class="list">
+        <%= link_to "#" do %>
+        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "matter-img"%>
+        <% end %>
+        <div class="matter-info">
+          <h3 class="matter-title">
+          投稿してね!
+          </h3>
+          <div class="info">
+          プログラミングができる人募集
+          </div>
+          <div class="matter-price">
+            <span>9999円/h~</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+<%= render "shared/footer"%>
+
+
+
