@@ -1,0 +1,96 @@
+.main {
+  background: #f8f8f8;
+}
+
+.title-contents {
+  width: 100vw;
+  height: 500px;
+  background-image: url(job-en-c-header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+
+}
+
+.service-title {
+  font: 7vh 'futura', 'noto sans japanese', sans-serif;
+}
+
+.service-subtitle {
+  font: 3vh 'futura', 'noto sans japanese', sans-serif;
+}
+
+.service-explain {
+  font-size: 2.5vh;
+  line-height: 40px;
+}
+
+.matter-text {
+  font-size: 3vh;
+  border: 1px solid lightblue;
+  padding: 30px;
+  color: deepskyblue;
+  text-decoration: none;
+  margin: 0 0 0 auto;
+}
+
+.matter-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.matter-contents>.title {
+  font-size: 5vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.matter-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.matter-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+.matter-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.matter-info {
+  background-color: #fff;
+  color: black;
+  padding: 1vw;
+}
+
+.matter-title {
+  font-size: 2.5vh;
+}
+
+.info {
+  font-size: 4vh;
+}
+
+.matter-price {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,20 @@
+.footer {
+  width: 100vw;
+  padding: 5vh 0;
+  color: #fff;
+  background-color: black;
+  text-align: center;
+}
+
+.footer-contents {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.footer-logo {
+  width: 185px;
+  height: 140px;
+  margin: 0 auto;
+}

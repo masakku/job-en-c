@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  flex-direction: column;
+}
+ 
+
+/*ヘッダー*/
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin: 0 0 0 auto;
+}
+
+.login a {
+  color: #333333;
+}
+
+.sign-up a {
+  color: #333333;
+}
+
+/*ロゴ*/
+.job-en-c-icon {
+  width: 10vw;
+  margin-right: 10vw;
+}
