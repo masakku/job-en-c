@@ -26,8 +26,8 @@
 | ----------------------- | --------- | -------------------------------------------- |
 | title                   | string    | null: false                                  |
 | info                    | text      | null: false                                  |
-| category_id             | integer   | null: false                                  |
-| scheduled_id            | integer   | null: false                                  |
+| genre_id                | integer   | null: false                                  |
+| scheduled               | text      | null: false                                  |
 | detail                  | text      | null: false                                  |
 | price                   | integer   | null: false                                  |
 | user                    | references| null: false, foreign_key: true               |
