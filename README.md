@@ -9,7 +9,6 @@
 | encrypted_password | string | null: false               |
 | name_kana          | string | null: false               |
 | profile            | string | null: false               |
-| career             | string | null: false               |
 | position           | string | null: false               |
 | occupation         | string | null: false               |
 
@@ -17,7 +16,7 @@
 ### Association
 
 - has_many :room_messages
-- has_many :items
+- has_many :matters
 - has_many :rooms, through: :room_matter_users
 
 
