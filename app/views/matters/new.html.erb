@@ -1,0 +1,75 @@
+<div class="matter-contents">
+  <header class="matter-header">
+    <%= image_tag"job-en-c02.png" , size: '160x120' %>
+  </header>
+
+  <div class="matter-main">
+    <h2 class="matter">案件情報を入力</h2>
+    <%= form_with model: @matter, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="img-upload">
+      <div class="text-bold">
+        画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"matter-image" %>
+      </div>
+    </div>
+
+    <div class="new-matters">
+        <div class="text-bold">
+          タイトル
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :title, class: "matters-text", id:"matter-title", placeholder:"案件名(40文字まで)", maxlength:"40"%>
+        <div class="matters-info">
+          <div class="text-bold">
+            案件内容
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :info, class:"matters-text", id:"matter-info", placeholder:"案件内容(内容を詳細に記入の方お願いします)(1000文字まで)", rows:"15" ,maxlength:"1000" %>
+        </div>
+    </div>
+
+
+
+    <div class="matter-detail">
+      <div class="text-bold">案件詳細</div>
+      <div class="form">
+        <div class="text-bold">
+          ジャンル
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"matter-genre"}) %>
+        <div class="text-bold">
+          稼働日数・時間
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:scheduled_id, Scheduled.all, :id, :name, {}, {class:"select-box", id:"matter-scheduled"})%>
+        <div class="text-bold">
+          特徴・場所
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :detail, class:"matters-text", id:"matter-detail", placeholder:"(700文字まで)", rows:"15" ,maxlength:"700" %>
+        <div class="text-bold">
+          時給
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :price, class:"price-input" , id:"matter-price", placeholder:"(半角数字のみ)" %>
+        <span class="sell-hour">/h</span>
+      </div>
+    </div>
+
+    <div class="matter-btn-contents">
+      <%= f.submit "案件投稿" ,class:"matter-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  <% end %>
+  </div>
+</div>

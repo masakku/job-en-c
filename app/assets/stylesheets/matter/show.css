@@ -1,0 +1,119 @@
+/*案件の概要*/
+
+.matter-show {
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.matter-box {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.matter-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 300px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+}
+
+.matter-title-box {
+  margin: 25px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.info-detail {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  resize: none;
+  margin: 40px 0px
+}
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-matter {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+.show-text-bold {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.matter-red-btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+.or-text {
+  font-size: 20px;
+}
+
+.matter-destroy {
+  background-color: lightgray;
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+.matters-btn {
+  text-align: center;
+  background-color: #2dd4ea;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}

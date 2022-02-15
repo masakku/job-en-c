@@ -14,13 +14,39 @@
     <p class="service-explain">
       ビジネスマッチングアプリです。
     </p>
-    <span class="matter-text">案件投稿</span>
+    <%= link_to new_matter_path, class: 'matter-text' do%>
+    <span>案件投稿</span>
+    <% end %>
   </div>
 
   <div class="matter-contents">
     <h2 class="title">案件一覧</h2>
   </div>
     <ul class="matter-lists">
+    <% @matters.present? %>
+    <% @matters.each do |matter| %>
+      <li class="list">
+        <%= link_to matter_path(matter.id) do%>
+        <div class="matter-img-content">
+          <%= image_tag matter.image, class: "matter-img" if matter.image.attached? %>
+        </div>
+        <div class="matter-info">
+          <h3 class="matter-title">
+            <%= matter.title %>
+          </h3>
+          <div class="matter-info">
+            <%= matter.info %>
+          </div>
+          <div class="matter-price">
+            <span><%= matter.price %>円/h~</span>
+          </div>
+        </div>
+        <% end %>
+      </li>
+    <% end %>
+
+
+      <% if @matters.length == 0%>
       <li class="list">
         <%= link_to "#" do %>
         <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "matter-img"%>
@@ -37,6 +63,8 @@
           </div>
         </div>
       </li>
+      <% end %>
+   
     </ul>
   </div>
 <%= render "shared/footer"%>

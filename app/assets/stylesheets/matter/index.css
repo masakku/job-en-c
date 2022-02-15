@@ -61,24 +61,37 @@
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 1px 55px;
+  border: solid 1px #ccc;
 }
 
 .matter-lists>.list {
-  width: 37vh;
+  width: 60vh;
   padding: 1vw;
   background-color: #FFF;
+  border: solid 1px #ccc;
+  margin: 10px 10px;
+}
+
+.matter-img-content {
+  text-align: center;
 }
 
 .matter-img {
-  width: 33vh;
-  height: 33vh;
+  width: 50vh;
+  height: 20vh;
 }
 
 .matter-info {
   background-color: #fff;
   color: black;
   padding: 1vw;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
 }
 
 .matter-title {
