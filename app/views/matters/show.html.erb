@@ -1,0 +1,60 @@
+<%= render "shared/header"%>
+
+<div class="matter-show">
+  <div class="matter-box">
+    <h2 class="detail-title">案件情報</h2>
+    
+    <div class="matter-img-content">
+      <%= image_tag @matter.image, class:"matter-box-img" if @matter.image.attached? %>
+    </div>
+
+    <div class="matter-title-box">
+      <span class="title">
+        <%= @matter.title%>
+      </span>
+    </div>
+
+    <div class="info-detail">
+      <%= @matter.info %>
+    </div>
+    
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-matter">時給</th>
+          <td class="detail-value"><%= @matter.price %>/h</td>
+        </tr>
+        <tr>
+          <th class="detail-matter">ジャンル</th>
+          <td class="detail-value"><%= @matter.genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-matter">稼働日数・時間</th>
+          <td class="detail-value"><%= @matter.scheduled.name %></td>
+        </tr>
+        <div class="show-text-bold">
+          詳細
+        </div>
+        <div class="info-detail">
+          <%= @matter.detail %>
+        </div>
+      </tbody>
+    </table>
+    <% if user_signed_in? %>
+      <% if current_user.id == @matter.user_id %>
+        <%= link_to "案件の編集", edit_matter_path, method: :get, class: "matter-red-btn" %>
+        <p class="or-text">or</p>
+        <%= link_to "削除", matter_path(@matter.id), method: :delete, class:"matter-destroy" %>
+      <% elsif %>
+        <%= link_to "案件が気になる", "#", method: :post, class:"matters-btn" %>
+      <% end %>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <% if current_user.id == @matter.user_id %>
+        <%= link_to "案件が気になる人を確認する", "#", method: :post, class:"matters-btn"%>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>

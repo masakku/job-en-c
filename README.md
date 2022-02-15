@@ -27,7 +27,7 @@
 | title                   | string    | null: false                                  |
 | info                    | text      | null: false                                  |
 | genre_id                | integer   | null: false                                  |
-| scheduled               | text      | null: false                                  |
+| scheduled_id            | integer   | null: false                                  |
 | detail                  | text      | null: false                                  |
 | price                   | integer   | null: false                                  |
 | user                    | references| null: false, foreign_key: true               |
@@ -35,8 +35,7 @@
 ### Association
 
 - belongs_to :user
-- has_many :rooms, through: :room_matter_users
-- belongs_to :category
+- belongs_to :genre
 - belongs_to :scheduled
 
 
