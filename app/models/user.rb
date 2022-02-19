@@ -4,9 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :room_messages
+  has_many :room_users
+  has_many :rooms, through: :room_users
+  has_many :messages
   has_many :matters
-  has_many :rooms, through: :room_matter_users
+  
 
   validates :nickname, presence: true
   validates :name_kana, presence: true, format: { with: /\A[ァ-ヶー－]+\z/, message: '全角カタカナを使用してください' }

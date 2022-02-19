@@ -1,0 +1,23 @@
+<div class="rooms">
+  <div class="room-side">
+    <div class="side-header">
+      <%= image_tag"job-en-c02.png", class:"rooms-icon" %>
+    </div>
+
+
+  <% current_user.rooms.each do |room| %>
+  <div class="side-main">
+    <div class="room">
+      <div class="room-name">
+      <% @another_user = (room.users.where.not(id: current_user.id).to_a)[0] %>
+        <%= link_to @another_user.nickname, "#" %>
+      </div>
+    </div>
+
+    <div class="delete-room">
+      <%= link_to "×", room_path(room), method: :delete %>
+    </div>
+  </div>
+  <% end %>
+  </div>
+</div>
