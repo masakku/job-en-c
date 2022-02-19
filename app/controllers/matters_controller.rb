@@ -21,6 +21,7 @@ class MattersController < ApplicationController
   end
 
   def show
+
   end
 
   def edit

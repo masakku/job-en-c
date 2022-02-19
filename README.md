@@ -15,9 +15,10 @@
 
 ### Association
 
-- has_many :room_messages
+- has_many :messages
 - has_many :matters
-- has_many :rooms, through: :room_matter_users
+- has_many :rooms, through: :room_users
+- has_many :room_users
 
 
 ## matters テーブル
@@ -43,35 +44,33 @@
 
 | Column                  | Type      | Options                                      |
 | ----------------------- | --------- | -------------------------------------------- |
-| id                      | integer   | null: false                                  |
+| name                    | string    |                                              |
 
 ### Association
 
-- has_many :room_messages
-- has_many :users, through: :room_matter_users
-- has_many :matters, through: :room_matter_users
+- has_many :room_users
+- has_many :users, through: :room_users
+- has_many :messages
 
 
-## room_matter_users テーブル
+## room_users テーブル
 
 | Column                  | Type      | Options                                      |
 | ----------------------- | --------- | -------------------------------------------- |
 | user                    | references| null: false, foreign_key: true               |
 | room                    | references| null: false, foreign_key: true               |
-| matter                  | references| null: false, foreign_key: true               |
 
 - belongs_to :user
-- belongs_to :matter
 - belongs_to :room
 
 
-## room_messages テーブル
+## messages テーブル
 
 | Column                  | Type      | Options                                      |
 | ----------------------- | --------- | -------------------------------------------- |
 | user                    | references| null: false, foreign_key: true               |
 | room                    | references| null: false, foreign_key: true               |
-| message                 | string    | null: false                                  |
+| message                 | string    |                                              |
 
 - belongs_to :user
 - belongs_to :room
