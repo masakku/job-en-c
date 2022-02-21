@@ -23,7 +23,7 @@ Job　Encounter　Chance
 
 # DEMO
 ### トップページ
-
+[![Image from Gyazo](https://i.gyazo.com/34e1022e2e036152dbd834ab004b943f.gif)](https://gyazo.com/34e1022e2e036152dbd834ab004b943f)
 ユーザーの方々にどういった案件が投稿してあるかを確認していただくことが出来ます。
 
 
